@@ -1,0 +1,361 @@
+body {
+  background: #cfcfcf;
+}
+
+/*-------------Header-------------------*/
+.logo{
+  background-color: black;
+}
+h2,
+h4 {
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.line-under-h1,
+.line-under-h2 {
+  height: 2px;
+}
+
+.line-under-h1 {
+  background-color: white;
+  border-color: white;
+  width: 100%;
+}
+
+.line-under-h2 {
+  background-color: black;
+  border-color: black;
+  width: 75%;
+}
+
+.wrapper,
+.wrapperabout,
+.wrappercontact {
+  width: 1000px;
+  margin: auto;
+  background-color: white;
+
+}
+
+.wrapper {
+  min-height: 500px;
+}
+
+.wrapperabout {
+  min-height: 600px;
+}
+
+/*--START: Navigation style (Index page)--*/
+.nav {
+  border: 1px solid black;
+  background-color: #000000;
+
+}
+
+.navul {
+  list-style: none;
+  padding: 10px;
+  margin-top: 15px;
+  margin-left: 60%;
+  width: 35%;
+
+}
+
+.navli {
+  display: inline-block;
+
+}
+
+.navli a {
+  color: white;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 15px;
+}
+
+a:hover {
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: 2px;
+  cursor: pointer;
+}
+
+/*--END: Navigation style--*/
+
+/*--START: Banner and aside style--*/
+/*--Reference for gradient color https://www.eggradients.com/category/blue-gradient--*/
+.banner,
+.bannerabout {
+  background-color: #6A93CB;
+  min-height: 450px;
+  width: 100%;
+}
+
+.bannerabout {
+  min-height: 500px;
+}
+
+.asideright,
+.asideleft,
+.asiderightproject,
+.asideleftproject {
+
+  min-height: 400px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.asideright {
+  float: right;
+  width: 60%;
+  padding: 26px;
+  box-sizing: border-box;
+
+}
+
+.asiderightproject {
+  float: right;
+  width: 40%;
+  padding: 12px;
+
+}
+
+.asideleft {
+  width: 40%;
+
+}
+
+.asideleft {
+  float: left;
+}
+
+.asideleftproject {
+  padding: 12px;
+  width: 60%;
+}
+
+.profile-img {
+  width: 183px;
+  height: 210px;
+  border-radius: 60%;
+  background-color: white;
+  margin-top: 90px;
+  margin-left: 30%;
+}
+
+.project-img-one,
+.project-img-two,
+.project-img-three {
+  background-color: white;
+  margin-top: 10px;
+  margin-left: 10%;
+}
+
+.project-img-one {
+  width: 283px;
+  height: 310px;
+}
+
+.project-img-two {
+  width: 250px;
+  height: 370px;
+}
+
+.project-img-three {
+  width: 310px;
+  height: 290px;
+}
+
+p {
+  font-family: Helvetica, sans-serif;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.li-description {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: justify;
+  margin-top: 12px;
+}
+
+.container1 {
+  width: 100%;
+  min-height: 20px;
+
+}
+
+
+.flex-box-menu-1,.flex-box-menu-2 {
+  display: flex;
+  box-sizing: border-box;
+}
+
+.flex-box-menu-1 > div {
+  background-color: #f1f1f1;
+  margin: 10px;
+  padding: 90px;
+  font-size: 30px;
+}
+.flex-box-menu-2 > div {
+  background-color: #f1f1f1;
+  margin: 10px;
+  padding: 90px;
+  font-size: 30px;
+}
+
+
+
+.container2,
+.container3 {
+  width: 50%;
+  min-height: 20px;
+  border: 1px solid #000;
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 10px 5px 5px #cfcfcf;
+  box-sizing: border-box;
+
+}
+
+/*--END: Banner and aside style--*/
+
+/*--START: Contact Page --*/
+
+.left_navigation {
+  border-right: 1px solid #000000;
+  min-height: 600px;
+  width: 25%;
+  background-color: grey;
+}
+
+.right_header {
+  min-height: 500px;
+  width: 78%;
+  background-color: #d3d3d3;
+  float: right;
+  display: flex;
+  border: 1px solid #000000;
+  border-radius: 12px;
+}
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  text-align: center;
+  font-size: 30px;
+  color: #fff;
+}
+
+.banner-img {
+  width: 100%;
+  height: 500px;
+}
+
+h2 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+footer {
+  width: 100%;
+  min-height: 50px;
+  background-color: #000;
+}
+
+/*--Contact wepage styling--*/
+
+.aside-container {
+  background-color: #fff;
+  min-height: 700px;
+  width: 100%;
+}
+
+.asiderightcontact {
+  min-height: 500px;
+  float: right;
+  position: relative;
+  box-sizing: border-box;
+  padding: 30px;
+  width: 50%;
+}
+
+.asideleftcontact {
+  min-height: 700px;
+  border-right: 1px solid #000;
+  float: left;
+  position: relative;
+  box-sizing: border-box;
+  padding: 30px;
+  width: 50%;
+}
+
+input[type="text"],
+input[type=email],
+input[type=password] {
+  margin-top: 15px;
+  width: 80%;
+  padding: 13px;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+
+}
+
+label {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+}
+
+.btn {
+  background-color: black;
+  color: white;
+  width: 50%;
+  padding: 20px
+}
+
+.btn:hover {
+  background-color: gray;
+  color: #000;
+}
+
+a {
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  text-align: center;
+}
+
+.pwd-forgot {
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  float: left;
+}
+
+a:hover {
+  cursor: pointer;
+
+}
+
+input[type="submit"] {
+  margin-left: 20px;
+}
+
+.external-button {
+  border: 1px solid #000;
+
+}
+
+textarea {
+  width: 80%;
+  height: 170px;
+  margin-top: 15px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+}
+
+/*--: END Contact Page --*/

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width= device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        body {
+            background-color: whitesmoke;
+        }
+
+        .wrapper {
+            margin: auto;
+            width: 1000px;
+
+        }
+
+        main {
+            background-color: white;
+            padding: 50px;
+            border-top-right-radius: 12px;
+            border-top-left-radius: 12px;
+
+        }
+
+        h1 {
+            text-align: center;
+            font-family: sans-serif;
+        }
+
+        hr{
+            height:2px;
+            background-color: black;
+            border:none;
+        }
+
+        label,
+        legend {
+            font-family: sans-serif;
+        }
+
+        div {
+            padding: 13px;
+        }
+
+        legend {
+            font-weight: bold;
+        }
+
+        input[type=text],input[type=password],
+        select {
+            width: 400px;
+            height: 30px;
+            padding: 5px;
+            margin-top: 5px;
+            border: 1px solid gray;
+        }
+
+        input[type=radio]{
+            font-family: sans-serif;
+        }
+
+        input[type=submit] {
+            width: 400px;
+            height: 50px;
+            padding: 5px;
+            margin: 8px 0px;
+            background-color: lightblue;
+            font-family: sans-serif;
+            font-size: 20px;
+            cursor: pointer;
+
+        }
+
+        fieldset {
+            margin-top: 20px;
+    
+        }
+
+        .div_input_submit {
+            text-align: center;
+        }
+
+        footer {
+            width: 100%;
+            min-height: 80px;
+            background-color: black;
+            margin-top: -15px;
+            border-bottom-left-radius: 12px;
+            border-bottom-right-radius: 12px;
+        }
+        p{
+            text-align: center;
+            color: white;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="wrapper">
+        <nav>
+            
+        </nav>
+        <main>
+            <div>
+                <h1>Registration Form</h1>
+            </div>
+            <hr>
+            <br>
+            <form name="registerForm" onsubmit="onSUbmitHandler(event)">
+                <fieldset>
+                    <legend>Enter your username and email address</legend>
+                    <div>
+                        <label for="username">Username:<br />
+                            <input type="text" name="username" /></label>
+                    </div>
+                    <div>
+                        <label for="email">Email</label><br />
+                        <input type="text" name="email" />
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Create your new password</legend>
+                    <div>
+                      <label for="Password">Password</label><br />
+                      <input type="password" name="password" />
+                    </div>
+                </fieldset>
+                <!--
+                <fieldset>
+                    <legend>Select your gender</legend>
+                    <div>
+                        <label>Gender</label><br />
+                        <input type="radio" name="gender" value="male" />Male
+                        <input type="radio" name="gender" value="female" />Female
+                    </div>
+
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>Subcribe for lastest promotion</legend>
+                    <div>
+                        <label for="subscribe">Subscribe</label><br />
+                        <input type="checkbox" name="subscribe" value="subscribe" id="subscribe"
+                            onchange="onChangeHandler()">
+                    </div>
+                </fieldset> -->
+                <br>
+                <div class="div_input_submit">
+                    <input type="submit" value="Register">
+                </div>
+
+                <!--Result value-->
+                <div>
+                    <h2 id="result1"></h2>
+                    <h2 id="result2"></h2>
+                    <h2 id="result3"></h2>
+                    <h2 id="result4"></h2>
+                    <h2 id="result5"></h2>
+                    <h2 id="subscribe1"></h2>
+                    <h2 id="error"></h2>
+                </div>
+            </form>
+        </main>
+        <footer>
+            <div>
+                <p>RescueMe @2023</p>
+            </div>
+        </footer>
+    </div>
+
+
+    <!--script for form validations-->
+    <script>
+        "use strict"
+        function onSUbmitHandler(event) {
+            event.preventDefault()
+            let firstname = document.forms['registerForm']['firstname'].value;
+            let email = document.forms['registerForm']['email'].value;
+            let country = document.forms['registerForm']['country'].value;
+            let gender = document.forms['registerForm']['gender'].value;
+            let subscribe = document.forms['registerForm']['subscribe'].value;
+            // console.log(firstname, email, country, gender, subscribe);
+
+            // Validation  to validate if user enter and select the required form
+            if (firstname === "") {
+                document.getElementById('result1').innerHTML = " * Username field is requried";
+                return false;
+                // Regrex validation
+            } else if (email === "") {
+                document.getElementById('result1').innerHTML = " * Email field name is requried";
+                return false;
+            } else {
+                document.getElementById('result1').innerHTML = firstname;
+                document.getElementById('result2').innerHTML = email;
+                document.getElementById('result3').innerHTML = country;
+                document.getElementById('result4').innerHTML = gender;
+                // document.getElementById('result5').innerHTML = subscribe;
+
+                let checkbox = document.getElementById("subscribe");
+                if (checkbox.checked) {
+                    document.getElementById('result5').innerHTML = "check";
+
+                } else {
+                    document.getElementById('result5').innerHTML = "uncheck";
+                }
+
+            }
+        }
+
+        //Here if you are using onchange="function()" within the <input type="checkbox"
+        function onChangeHandler() {
+            let checkbox = document.getElementById("subscribe");
+            if (checkbox.checked) {
+                document.getElementById('subscribe1').innerHTML = "check";
+
+            } else {
+                document.getElementById('subscribe1').innerHTML = "uncheck";
+            }
+
+        }
+
+
+
+        //nodejs mysql server
+        //TODO: Store username, email, and password
+        
+
+    </script>
+
+
+
+</body>
+
+</html>
